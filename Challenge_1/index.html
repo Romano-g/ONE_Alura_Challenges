@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criptografando!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <head></head>
+    <main class="main-content">
+        <section class="main__section">
+            <h1 class="main__heading">Criptografando!</h1>
+
+            <div class="main__message1">
+                <div class="main__generic__grid">
+                    <label class="main__label" for="main__messagetxt">Digite o texto para ser criptografado:</label>
+
+                    <textarea type="text" name="main__messagetxt" id="main__messagetxt" cols="30" rows="10" wrap="hard" class="main__textarea" placeholder="Eu amo gatinhos" required></textarea>
+                </div>
+            
+                <div class="main__generic__grid">
+                    <label class="main__label" for="main__messagetxt_result">Seu texto criptografado:</label>
+
+                    <div>
+                        <textarea name="main__messagetxt_result" id="main__messagetxt_result" cols="30" rows="10" wrap="hard" class="main__textarea" placeholder="Ainda não há nada aqui!" disabled></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main_buttons">
+                <button onclick="encrypt()" id="buttonEncrypt">Criptografar</button>
+                <button onclick="translateButton()" id="buttonTraduzir">Traduzir</button>
+                <button onclick="copyText()" id="copyButton">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="foot">
+        <p class="foot-content">Desenvolvido por Romano.</p>
+    </footer>
+    
+    <script src="js/app.js" defer></script>
+</body>
+</html>
