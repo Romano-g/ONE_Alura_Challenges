@@ -14,7 +14,7 @@ function editBackground (imgPath) {
 
 function encrypt() {
     let userTxt = document.getElementById('main__messagetxt').value;
-    let result = userTxt.replace(/[èéêe]/g, 'enter').replace(/[ìíîi]/g, 'imes').replace(/[aáãàâ]/g, 'ai').replace(/[òóôõo]/g, 'ober').replace(/[uùúû]/g, 'ufat').replace(/ç/g, 'c');
+    let result = userTxt.replace(/[EÉÈÊèéêe]/g, 'enter').replace(/[IÍÌÎìíîi]/g, 'imes').replace(/[AÁÃÀÂaáãàâ]/g, 'ai').replace(/[ÒÓÔÕOòóôõo]/g, 'ober').replace(/[UÛÚÙuùúû]/g, 'ufat').replace(/[Çç]/g, 'c');
 
     userTxt == '' ? editBackground("https://thumbs.dreamstime.com/b/gato-com-lupa-e-pesquisa-55046971.jpg") : editBackground("");
     editText('main__messagetxt_result', result)
@@ -24,7 +24,7 @@ function encrypt() {
 
 function translateButton() {
     let userTxt = document.getElementById('main__messagetxt').value;
-    let result = userTxt.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
+    let result = userTxt.replace(/[EÉÈÊèéêe]/g, 'enter').replace(/[IÍÌÎìíîi]/g, 'imes').replace(/[AÁÃÀÂaáãàâ]/g, 'ai').replace(/[ÒÓÔÕOòóôõo]/g, 'ober').replace(/[UÛÚÙuùúû]/g, 'ufat').replace(/[Çç]/g, 'c');
 
     userTxt == '' ? editBackground("https://thumbs.dreamstime.com/b/gato-com-lupa-e-pesquisa-55046971.jpg") : editBackground("");
     editText('main__messagetxt_result', result)
