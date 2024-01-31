@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -10,14 +11,13 @@
     --font-title: 'Montserrat', sans-serif;
     --font-text: 'Open Sans', sans-serif;
     
-    --primary-color: #80BCBD;
-    --secondary-color: #D5F0C1;
-    --hover-color: #AAD9BB;
-    --text-color: #F9F7C9;
+    --primary-color: #004225;
+    --secondary-color: #FFB000;
+    --hover-color: #F5F5DC;
+    --text-color: #FFCF9D;
 }
 
 body {
-    height: 100vh;
     background: var(--primary-color);
     color: var(--text-color);
 }
@@ -37,10 +37,24 @@ button:hover {
     background: var(--hover-color);
     box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+    color: var(--primary-color);
+}
+
+.head {
+    position: fixed;
+    top: 0;
+}
+
+.head__heading {
+    font-family: var(--font-title);
+    text-align: center;
+    font-size: 5rem;
+    padding: 1.5rem;
+    color: var(--text-color);
 }
 
 .main-content {
-    padding: 5% 10%;
+    padding: 2%;
 }
 
 .main__section {
@@ -49,22 +63,17 @@ button:hover {
     gap: 40px;
 }
 
-.main__heading {
-    font-family: var(--font-title);
-    text-align: center;
-    font-size: 3rem;
-}
-
 .main__label {
-    display: block;
+    display: inline-block;
     font-family: var(--font-text);
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
-    height: 3rem;
+    height: fit-content;
+    font-weight: 500;
 }
 
 .main__textarea {
-    border: 2px solid var(--secondary-color);
+    border: 3px solid var(--secondary-color);
     font-family: var(--font-text);
     font-size: 2rem;
     width: 100%;
@@ -75,11 +84,21 @@ button:hover {
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
+.main__textarea::placeholder {
+    font-family: var(--font-text);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.main__textarea:focus {
+    outline: 0;
+}
+
 #main__messagetxt_result {
-    background-image: url('../imgs/High.svg');
+    background-image: url('https://thumbs.dreamstime.com/b/gato-com-lupa-e-pesquisa-55046971.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right bottom;
 }
 
 #main__messagetxt_result::placeholder {
@@ -95,6 +114,7 @@ button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    align-items: baseline;
 }
 
 .main_buttons {
@@ -104,13 +124,112 @@ button:hover {
 }
 
 .foot {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 1.5rem;
     text-align: center;
     font-family: var(--font-texts);
     font-size: 1.5rem;
     font-weight: 400;
+    background: var(--text-color);
 }
 
 .foot-content {
     font-family: var(--font-text);
+    color: var(--primary-color);
+}
+
+@media all and (min-width: 376px) and (max-width: 768px) {
+    .head__heading {
+        font-size: 3rem;
+    }
+
+    .main-content {
+        display: flex;
+        padding-bottom: 7rem;
+    }
+    
+    .main__message1 {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    
+    .main__generic__grid {
+        margin: auto;
+        width: 80%;
+    }
+
+    .main__label {
+        font-size: 1.5rem;
+    }
+    
+    .main__textarea {
+        font-size: 1.5rem;
+        height: 240px;
+    }
+
+    .main__textarea::placeholder {
+        font-size: 1.5rem;
+    }
+
+    .foot {
+        padding: 1rem;
+    }
+}
+
+@media all and (max-width: 375px) {
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        display: flex;
+    }
+
+    .main__section {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .head__heading {
+        font-size: 2rem;
+    }
+    
+    .main__message1 {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    
+    .main__generic__grid {
+        margin: auto;
+        width: 80%;
+    }
+
+    .main__label {
+        font-size: 1rem;
+    }
+    
+    .main__textarea {
+        font-size: 1rem;
+    }
+
+    .main__textarea::placeholder {
+        font-size: 1rem;
+    }
+
+    .main_buttons {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        width: 80%;
+        padding-bottom: 3rem;
+    }
+
+    .foot {
+        padding: 1%;
+        font-size: 1rem;
+    }
 }

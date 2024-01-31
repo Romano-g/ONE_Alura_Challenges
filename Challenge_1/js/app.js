@@ -16,7 +16,7 @@ function encrypt() {
     let userTxt = document.getElementById('main__messagetxt').value;
     let result = userTxt.replace(/[èéêe]/g, 'enter').replace(/[ìíîi]/g, 'imes').replace(/[aáãàâ]/g, 'ai').replace(/[òóôõo]/g, 'ober').replace(/[uùúû]/g, 'ufat').replace(/ç/g, 'c');
 
-    userTxt == '' ? editBackground("./imgs/High.svg") : editBackground("./imgs/white.svg");
+    userTxt == '' ? editBackground("https://thumbs.dreamstime.com/b/gato-com-lupa-e-pesquisa-55046971.jpg") : editBackground("");
     editText('main__messagetxt_result', result)
     editText('copyButton', 'Copiar')
     clearFieldUserMsg()
@@ -26,7 +26,7 @@ function translateButton() {
     let userTxt = document.getElementById('main__messagetxt').value;
     let result = userTxt.replace(/enter/g, 'e').replace(/imes/g, 'i').replace(/ai/g, 'a').replace(/ober/g, 'o').replace(/ufat/g, 'u');
 
-    userTxt == '' ? editBackground("./imgs/High.svg") : editBackground("./imgs/white.svg");
+    userTxt == '' ? editBackground("https://thumbs.dreamstime.com/b/gato-com-lupa-e-pesquisa-55046971.jpg") : editBackground("");
     editText('main__messagetxt_result', result)
     editText('copyButton', 'Copiar')
     clearFieldUserMsg()
