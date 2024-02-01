@@ -141,7 +141,7 @@ button:hover {
     color: var(--primary-color);
 }
 
-@media all and (min-width: 376px) and (max-width: 768px) {
+@media all and (min-width: 501px) and (max-width: 1000px) {
     .head__heading {
         font-size: 3rem;
     }
@@ -179,7 +179,7 @@ button:hover {
     }
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 500px) {
     button {
         width: 100%;
         font-size: 1rem;
